@@ -70,68 +70,73 @@ li {
 }
 
 header {
-  position: relative;
-}
-header .head-fr {
-  justify-content: space-evenly;
-  padding-top: 10px;
   position: fixed;
+  display: flex;
+  justify-content: space-evenly;
   width: 100%;
   padding: 0;
 }
-header .head-fr .logo {
+header .logo {
   width: 100%;
-  height: 100%;
-  text-align: center;
+  height: 50px;
+  text-align: end;
+  background-color: #383838;
+  display: flex;
+  justify-content: end;
 }
-header .head-fr .logo img {
-  width: 70%;
-  height: 70%;
+header .logo h2 {
+  margin: 11px 7px;
+  color: #fff;
+}
+header .logo img {
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
-header .head-fr .user-links {
-  background: #02b4ff;
-  margin-right: 20px;
+header .user-links {
+  background: #383838;
   height: 50px;
-  border-radius: 10px;
   text-align: center;
   display: flex;
-  margin-top: 40px;
   position: relative;
 }
-header .head-fr .user-links .linkUser {
+header .user-links .linkUser {
   font-size: 30px;
-  text-align: start;
-  margin-left: 20px;
+  margin-left: 60px;
   margin-top: 8px;
-  color: #383838;
+  color: #fff;
+  position: relative;
   cursor: pointer;
 }
-header .head-fr .user-links .linkUser i {
+header .user-links .linkUser i {
   font-size: 20px;
+  color: #fff;
+  position: absolute;
+  top: 5px;
 }
-header .head-fr .user-links .ul {
+header .user-links .ul {
   text-align: start;
   padding: 20px 20px;
-  background-color: #02b4ff;
+  background-color: #383838;
+  color: #fff;
   width: fit-content;
   height: fit-content;
   border-radius: 6px;
   margin: 0;
   position: absolute;
-  left: 4px;
+  left: 43px;
   top: 60px;
   opacity: 1;
   display: none;
   font-size: 20px;
 }
-header .head-fr .user-links .ul li {
+header .user-links .ul li {
   cursor: pointer;
   margin-top: 10px;
 }
-header .head-fr .user-links .ul::before {
+header .user-links .ul::before {
   content: "";
-  border-bottom: #02b4ff;
+  border-bottom: #383838;
   border-top: transparent;
   border-left: transparent;
   border-right: transparent;
@@ -140,7 +145,7 @@ header .head-fr .user-links .ul::before {
   position: absolute;
   top: -20px;
 }
-header .head-fr .user-links .ul hr {
+header .user-links .ul hr {
   width: 100px;
   margin: 7px 0;
 }
@@ -150,15 +155,14 @@ header .main-nav-links {
   flex-direction: column;
   background: #383838;
   color: #fff;
-  width: 70px;
-  position: fixed;
-  z-index: 99999;
+  width: 65px;
   overflow-y: auto;
   overflow-x: hidden;
-  max-height: 100%;
+  max-height: 100vh;
 }
 header .main-nav-links::-webkit-scrollbar {
   display: none;
+  width: 0;
 }
 header .main-nav-links ul {
   margin: 0 0 0 11px;
@@ -179,8 +183,6 @@ header .main-nav-links li a {
   color: #fff;
   font-size: 16px;
   padding-top: 10px;
-  position: absolute;
-  left: 56px;
   display: none;
 }
 header .main-nav-links li i {
@@ -188,17 +190,17 @@ header .main-nav-links li i {
 }
 header .setting {
   width: 70px;
-  margin-left: 10px;
+  margin-left: 25px;
 }
 header .setting i {
   font-size: 30px;
   margin-top: 7px;
-  color: #383838;
+  color: #fff;
   cursor: pointer;
 }
 
 .active {
-  width: 200px !important;
+  width: 220px !important;
 }
 
 .disAnchor {

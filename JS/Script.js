@@ -6,7 +6,7 @@ let useractive = document.getElementById("ulUser");
 
 btn.onclick = function () {
     MainNav.classList.toggle('active');
-    if(MainNav.offsetWidth <= 70) { /*For End Of Project Find Way To make 70 Is Dainamic*/
+    if(MainNav.offsetWidth < 150) { /*For End Of Project Find Way To make 70 Is Dainamic*/
         setTimeout(function () {
             MainNavLink.forEach(e => {
                 e.classList.add('disAnchor')

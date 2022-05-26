@@ -75,13 +75,17 @@ table, th, td {
 }
 
 header {
-  position: fixed;
   display: flex;
   justify-content: space-evenly;
   width: 100%;
   padding: 0;
 }
-header .logo {
+header .up-nav {
+  width: 100%;
+  display: flex;
+  position: fixed;
+}
+header .up-nav .logo {
   width: 100%;
   height: 50px;
   text-align: end;
@@ -89,37 +93,39 @@ header .logo {
   display: flex;
   justify-content: end;
 }
-header .logo h2 {
+header .up-nav .logo h2 {
   margin: 11px 7px;
   color: #fff;
 }
-header .logo img {
+header .up-nav .logo img {
   width: 40px;
   height: 40px;
   cursor: pointer;
 }
-header .user-links {
+header .up-nav .user-links {
   background: #383838;
   height: 50px;
   text-align: center;
   display: flex;
   position: relative;
+  left: 52px;
+  transition: all 0.3s ease-in-out;
 }
-header .user-links .linkUser {
+header .up-nav .user-links .linkUser {
   font-size: 30px;
-  margin-left: 60px;
+  margin-left: 80px;
   margin-top: 8px;
   color: #fff;
   position: relative;
   cursor: pointer;
 }
-header .user-links .linkUser i {
+header .up-nav .user-links .linkUser i {
   font-size: 20px;
   color: #fff;
   position: absolute;
   top: 5px;
 }
-header .user-links .ul {
+header .up-nav .user-links .ul {
   text-align: start;
   padding: 20px 20px;
   background-color: #383838;
@@ -129,17 +135,17 @@ header .user-links .ul {
   border-radius: 6px;
   margin: 0;
   position: absolute;
-  left: 43px;
+  left: 63px;
   top: 60px;
   opacity: 1;
   display: none;
   font-size: 20px;
 }
-header .user-links .ul li {
+header .up-nav .user-links .ul li {
   cursor: pointer;
   margin-top: 10px;
 }
-header .user-links .ul::before {
+header .up-nav .user-links .ul::before {
   content: "";
   border-bottom: #383838;
   border-top: transparent;
@@ -150,11 +156,11 @@ header .user-links .ul::before {
   position: absolute;
   top: -20px;
 }
-header .user-links .ul hr {
+header .up-nav .user-links .ul hr {
   width: 100px;
   margin: 7px 0;
 }
-header .user-links span {
+header .up-nav .user-links span {
   color: #fff;
   margin: 13px 0px 0px 21px;
 }
@@ -168,6 +174,9 @@ header .main-nav-links {
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 100vh;
+  position: fixed;
+  left: 0;
+  z-index: 2;
 }
 header .main-nav-links::-webkit-scrollbar {
   display: none;
@@ -193,9 +202,10 @@ header .main-nav-links li a {
   color: #fff;
   font-size: 16px;
   padding-top: 10px;
-  display: none;
+  opacity: 0;
   position: absolute;
   left: 46px;
+  transition: all 0.3s ease-in-out;
 }
 header .main-nav-links li i {
   color: #fff;
@@ -316,11 +326,11 @@ header .setting i {
 }
 
 .active {
-  width: 220px !important;
+  width: 190px !important;
 }
 
 .disAnchor {
-  display: inline-block !important;
+  opacity: 1 !important;
 }
 
 @keyframes slideUser {
